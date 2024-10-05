@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "pulse-addon",
+  "version": "${version}",
+
+  "name": "Pulse Addon",
+  "description": "An addon to Meteor Client that adds modules and commands.",
+  "authors": [
+    "Glufy"
+  ],
+  "contact": {
+    "issues": "https://github.com/AntiCope/meteor-rejects/issues",
+    "sources": "https://github.com/AntiCope/meteor-rejects"
+  },
+
+  "license": "GPL-3.0",
+  "icon": "assets/rejects/icon.png",
+
+  "environment": "client",
+  "entrypoints": {
+    "meteor": [
+      "Glufy.Pulse.PulseAddon"
+    ],
+    "seedcrackerx": [
+      "Glufy.Pulse.utils.SeedCrackerEP"
+    ]
+  },
+  "mixins": [
+    "pulse-addon.mixins.json",
+    "pulse-addon-meteor.mixins.json"
+  ],
+  "accessWidener": "pulse-addon.accesswidener",
+  "custom": {
+    "meteor-client:color": "227,0,0",
+    "github:sha": "${gh_hash}"
+  },
+  "depends": {
+    "java": ">=16",
+    "minecraft": "~${mc_version}",
+    "meteor-client": "*"
+  }
+}
