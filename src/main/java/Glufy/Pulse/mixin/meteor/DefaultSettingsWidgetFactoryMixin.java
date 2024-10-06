@@ -1,6 +1,6 @@
 package Glufy.Pulse.mixin.meteor;
 
-import Glufy.Pulse.settings.RejectsSettings;
+import Glufy.Pulse.settings.PulseSettings;
 import meteordevelopment.meteorclient.gui.DefaultSettingsWidgetFactory;
 import meteordevelopment.meteorclient.gui.GuiTheme;
 import meteordevelopment.meteorclient.gui.utils.SettingsWidgetFactory;
@@ -17,6 +17,6 @@ public abstract class DefaultSettingsWidgetFactoryMixin extends SettingsWidgetFa
 
     @Inject(method = "<init>", at = @At("TAIL"), remap = false)
     private void onInit(GuiTheme theme, CallbackInfo ci) {
-        new RejectsSettings(factories, this.theme).addSettings();
+        new PulseSettings(factories, this.theme).addSettings();
     }
 }

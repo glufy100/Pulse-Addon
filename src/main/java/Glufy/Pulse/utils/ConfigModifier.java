@@ -10,9 +10,9 @@ public class ConfigModifier {
 
     private static ConfigModifier INSTANCE;
 
-    public final SettingGroup sgRejects = Config.get().settings.createGroup("Rejects");
+    public final SettingGroup sgPulse = Config.get().settings.createGroup("Pulse");
 
-    public final Setting<PulseConfig.HttpAllowed> httpAllowed = sgRejects.add(new EnumSetting.Builder<PulseConfig.HttpAllowed>()
+    public final Setting<PulseConfig.HttpAllowed> httpAllowed = sgPulse.add(new EnumSetting.Builder<PulseConfig.HttpAllowed>()
             .name("http-allowed")
             .description("Changes what api endpoints can be reached.")
             .defaultValue(PulseConfig.get().httpAllowed)
@@ -20,7 +20,7 @@ public class ConfigModifier {
             .build()
     );
 
-    public final Setting<String> httpUserAgent = sgRejects.add(new StringSetting.Builder()
+    public final Setting<String> httpUserAgent = sgPulse.add(new StringSetting.Builder()
             .name("http-user-agent")
             .description("Changes the HTTP user agent. Empty for none.")
             .defaultValue(PulseConfig.get().httpUserAgent)
@@ -28,7 +28,7 @@ public class ConfigModifier {
             .build()
     );
 
-    public final Setting<List<Module>> hiddenModules = sgRejects.add(new ModuleListSetting.Builder()
+    public final Setting<List<Module>> hiddenModules = sgPulse.add(new ModuleListSetting.Builder()
             .name("hidden-modules")
             .description("Which modules to hide.")
             .defaultValue(List.of())
@@ -37,7 +37,7 @@ public class ConfigModifier {
             .build()
     );
 
-    public final Setting<Boolean> loadSystemFonts = sgRejects.add(new BoolSetting.Builder()
+    public final Setting<Boolean> loadSystemFonts = sgPulse.add(new BoolSetting.Builder()
             .name("load-system-fonts")
             .description("Disabling this for faster launch. You can put font into meteor-client/fonts folder. Restart to take effect.")
             .defaultValue(true)
@@ -46,7 +46,7 @@ public class ConfigModifier {
             .build()
     );
 
-    public final Setting<Boolean> duplicateModuleNames = sgRejects.add(new BoolSetting.Builder()
+    public final Setting<Boolean> duplicateModuleNames = sgPulse.add(new BoolSetting.Builder()
             .name("duplicate-module-names")
             .description("Allow duplicate module names. Best for addon compatibility.")
             .defaultValue(false)

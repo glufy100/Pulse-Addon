@@ -32,7 +32,7 @@ public class PulseConfig extends System<PulseConfig> {
     public boolean duplicateModuleNames = false;
 
     public PulseConfig() {
-        super("rejects-config");
+        super("Pulse-config");
         init();
         load(MeteorClient.FOLDER);
     }

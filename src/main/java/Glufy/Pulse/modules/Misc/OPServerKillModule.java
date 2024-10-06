@@ -42,7 +42,7 @@ public class OPServerKillModule extends Module {
     );
     private final Setting<Boolean> crashOtherPlayers = sgGeneral.add(new BoolSetting.Builder()
             .name("crash-other-players")
-            .description("Crashes everyone else's minecraft client. Don't forget to enable Anti Crash in Rejects!")
+            .description("Crashes everyone else's minecraft client. Don't forget to enable Anti Crash!")
             .defaultValue(true)
             .build()
     );

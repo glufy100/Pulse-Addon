@@ -191,7 +191,7 @@ public class PulseAddon extends MeteorAddon {
 
     @Override
     public String getWebsite() {
-        return "https://github.com/AntiCope/meteor-rejects";
+        return "https://github.com/glufy100/Pulse-Addon";
     }
 
     @Override

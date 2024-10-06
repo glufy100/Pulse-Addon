@@ -10,12 +10,12 @@ import java.util.Map;
 
 import static meteordevelopment.meteorclient.MeteorClient.mc;
 
-public class RejectsSettings {
+public class PulseSettings {
     private final Map<Class<?>, SettingsWidgetFactory.Factory> factories;
 
     private final GuiTheme theme;
 
-    public RejectsSettings(Map<Class<?>, SettingsWidgetFactory.Factory> factories, GuiTheme theme) {
+    public PulseSettings(Map<Class<?>, SettingsWidgetFactory.Factory> factories, GuiTheme theme) {
         this.factories = factories;
         this.theme = theme;
     }
