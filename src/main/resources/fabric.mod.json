@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1.2,
+  "schemaVersion": 1,
   "id": "pulse-addon",
   "version": "${version}",
 
@@ -14,7 +14,7 @@
   },
 
   "license": "GPL-3.0",
-  "icon": "assets/rejects/icon.png",
+  "icon": "icon.png",
 
   "environment": "client",
   "entrypoints": {
