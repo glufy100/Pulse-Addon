@@ -12,19 +12,19 @@ public class ConfigModifier {
 
     public final SettingGroup sgRejects = Config.get().settings.createGroup("Rejects");
 
-    public final Setting<RejectsConfig.HttpAllowed> httpAllowed = sgRejects.add(new EnumSetting.Builder<RejectsConfig.HttpAllowed>()
+    public final Setting<PulseConfig.HttpAllowed> httpAllowed = sgRejects.add(new EnumSetting.Builder<PulseConfig.HttpAllowed>()
             .name("http-allowed")
             .description("Changes what api endpoints can be reached.")
-            .defaultValue(RejectsConfig.get().httpAllowed)
-            .onChanged(v -> RejectsConfig.get().httpAllowed = v)
+            .defaultValue(PulseConfig.get().httpAllowed)
+            .onChanged(v -> PulseConfig.get().httpAllowed = v)
             .build()
     );
 
     public final Setting<String> httpUserAgent = sgRejects.add(new StringSetting.Builder()
             .name("http-user-agent")
             .description("Changes the HTTP user agent. Empty for none.")
-            .defaultValue(RejectsConfig.get().httpUserAgent)
-            .onChanged(v -> RejectsConfig.get().httpUserAgent = v)
+            .defaultValue(PulseConfig.get().httpUserAgent)
+            .onChanged(v -> PulseConfig.get().httpUserAgent = v)
             .build()
     );
 
@@ -32,8 +32,8 @@ public class ConfigModifier {
             .name("hidden-modules")
             .description("Which modules to hide.")
             .defaultValue(List.of())
-            .defaultValue(RejectsConfig.get().getHiddenModules())
-            .onChanged(v -> RejectsConfig.get().setHiddenModules(v))
+            .defaultValue(PulseConfig.get().getHiddenModules())
+            .onChanged(v -> PulseConfig.get().setHiddenModules(v))
             .build()
     );
 
@@ -41,8 +41,8 @@ public class ConfigModifier {
             .name("load-system-fonts")
             .description("Disabling this for faster launch. You can put font into meteor-client/fonts folder. Restart to take effect.")
             .defaultValue(true)
-            .defaultValue(RejectsConfig.get().loadSystemFonts)
-            .onChanged(v -> RejectsConfig.get().loadSystemFonts = v)
+            .defaultValue(PulseConfig.get().loadSystemFonts)
+            .onChanged(v -> PulseConfig.get().loadSystemFonts = v)
             .build()
     );
 
@@ -50,8 +50,8 @@ public class ConfigModifier {
             .name("duplicate-module-names")
             .description("Allow duplicate module names. Best for addon compatibility.")
             .defaultValue(false)
-            .defaultValue(RejectsConfig.get().duplicateModuleNames)
-            .onChanged(v -> RejectsConfig.get().duplicateModuleNames = v)
+            .defaultValue(PulseConfig.get().duplicateModuleNames)
+            .onChanged(v -> PulseConfig.get().duplicateModuleNames = v)
             .build()
     );
 

@@ -15,8 +15,8 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-public class RejectsConfig extends System<RejectsConfig> {
-    private static final RejectsConfig INSTANCE = new RejectsConfig();
+public class PulseConfig extends System<PulseConfig> {
+    private static final PulseConfig INSTANCE = new PulseConfig();
 
     public enum HttpAllowed {
         Everything,
@@ -31,13 +31,13 @@ public class RejectsConfig extends System<RejectsConfig> {
     public boolean loadSystemFonts = true;
     public boolean duplicateModuleNames = false;
 
-    public RejectsConfig() {
+    public PulseConfig() {
         super("rejects-config");
         init();
         load(MeteorClient.FOLDER);
     }
 
-    public static RejectsConfig get() {
+    public static PulseConfig get() {
         return INSTANCE;
     }
 
@@ -79,7 +79,7 @@ public class RejectsConfig extends System<RejectsConfig> {
     }
 
     @Override
-    public RejectsConfig fromTag(NbtCompound tag) {
+    public PulseConfig fromTag(NbtCompound tag) {
         httpAllowed = HttpAllowed.valueOf(tag.getString("httpAllowed"));
         httpUserAgent = tag.getString("httpUserAgent");
         loadSystemFonts = tag.getBoolean("loadSystemFonts");

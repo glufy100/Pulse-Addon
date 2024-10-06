@@ -1,7 +1,7 @@
 package Glufy.Pulse.modules.Movement;
 
 import meteordevelopment.meteorclient.systems.modules.Categories;
-import Glufy.Pulse.utils.RejectsUtils;
+import Glufy.Pulse.utils.PulseUtils;
 import com.google.common.collect.Streams;
 import meteordevelopment.meteorclient.events.entity.player.PlayerMoveEvent;
 import meteordevelopment.meteorclient.events.packets.PacketEvent;
@@ -181,7 +181,7 @@ public class FullFlight extends Module {
             floatingTicks = 0;
         }
 
-        float ySpeed = RejectsUtils.fullFlightMove(event, speed.get(), verticalSpeedMatch.get());
+        float ySpeed = PulseUtils.fullFlightMove(event, speed.get(), verticalSpeedMatch.get());
 
         if (floatingTicks < 20)
             if (ySpeed >= -0.1)

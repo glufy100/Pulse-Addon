@@ -1,7 +1,7 @@
 package Glufy.Pulse.mixin.meteor;
 
 import Glufy.Pulse.utils.ConfigModifier;
-import Glufy.Pulse.utils.RejectsConfig;
+import Glufy.Pulse.utils.PulseConfig;
 import meteordevelopment.meteorclient.gui.tabs.builtin.ConfigTab;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -13,6 +13,6 @@ public class ConfigTabMixin {
 	// No idea why CallbackInfoReturnable, but fabric crashes otherwise lol
 	@Inject(method = "createScreen", at=@At("HEAD"), remap = false)
 	private void onCreateScreen(CallbackInfoReturnable<?> cir) {
-		ConfigModifier.get().hiddenModules.set(RejectsConfig.get().getHiddenModules());
+		ConfigModifier.get().hiddenModules.set(PulseConfig.get().getHiddenModules());
 	}
 }

@@ -1,6 +1,6 @@
 package Glufy.Pulse.mixin.meteor;
 
-import Glufy.Pulse.utils.RejectsConfig;
+import Glufy.Pulse.utils.PulseConfig;
 import meteordevelopment.meteorclient.utils.network.Http;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -12,7 +12,7 @@ import java.net.http.HttpRequest;
 public class HttpRequestMixin {
     @Redirect(method = "<init>", at = @At(value = "INVOKE", target = "Ljava/net/http/HttpRequest$Builder;header(Ljava/lang/String;Ljava/lang/String;)Ljava/net/http/HttpRequest$Builder;"))
     private HttpRequest.Builder onAddUAHeader(HttpRequest.Builder builder, String userAgent, String value) {
-        if (RejectsConfig.get().httpUserAgent.isBlank()) return builder;
+        if (PulseConfig.get().httpUserAgent.isBlank()) return builder;
         return builder.header("User-Agent", value);
     }
 }

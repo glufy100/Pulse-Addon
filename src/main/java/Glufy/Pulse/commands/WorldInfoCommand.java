@@ -157,15 +157,15 @@ public class WorldInfoCommand extends Command {
                     serverip = mc.getCurrentServerEntry().address.replace(':', '_');
                 }
 
-                if (!Files.exists(Paths.get("TrouserStreak/SavedWorldInfo/"+serverip+"/WorldInfoData.txt"))){
-                    File file = new File("TrouserStreak/SavedWorldInfo/"+serverip+"/WorldInfoData.txt");
+                if (!Files.exists(Paths.get("Pulse/SavedWorldInfo/"+serverip+"/WorldInfoData.txt"))){
+                    File file = new File("Pulse/SavedWorldInfo/"+serverip+"/WorldInfoData.txt");
                     try {
                         file.createNewFile();
                     } catch (IOException e) {}
                 }
                 try {
-                    new File("TrouserStreak/SavedWorldInfo/"+serverip+"/").mkdirs();
-                    FileWriter writer = new FileWriter("TrouserStreak/SavedWorldInfo/"+serverip+"/WorldInfoData.txt", true);
+                    new File("Pulse/SavedWorldInfo/"+serverip+"/").mkdirs();
+                    FileWriter writer = new FileWriter("Pulse/SavedWorldInfo/"+serverip+"/WorldInfoData.txt", true);
                     if (!isNewGeneration) {
                         writer.write("This chunk is pre 1.17 generation!");
                         writer.write("\r\n");   // write new line

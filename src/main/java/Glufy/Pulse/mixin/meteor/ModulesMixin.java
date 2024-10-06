@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import Glufy.Pulse.utils.RejectsConfig;
+import Glufy.Pulse.utils.PulseConfig;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -25,7 +25,7 @@ public class ModulesMixin {
 
     @Inject(method = "getGroup", at=@At("HEAD"), cancellable = true, remap = false)
     private void onGetGroup(Category category, CallbackInfoReturnable<List<Module>> cir) {
-        Set<String> hiddenModules = RejectsConfig.get().hiddenModules;
+        Set<String> hiddenModules = PulseConfig.get().hiddenModules;
         if (hiddenModules.isEmpty()) return;
 
         List<Module> foundModules = groups.computeIfAbsent(category, category1 -> new ArrayList<>());

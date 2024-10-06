@@ -426,13 +426,13 @@ public class NewerNewChunks extends Module {
 		}
 		if (save.get()){
 			try {
-				Files.createDirectories(Paths.get("TrouserStreak", "NewChunks", serverip, world));
+				Files.createDirectories(Paths.get("Pulse", "NewChunks", serverip, world));
 			} catch (IOException e) {
 				//e.printStackTrace();
 			}
 		}
 		if (save.get() || load.get()) {
-			Path baseDir = Paths.get("TrouserStreak", "NewChunks", serverip, world);
+			Path baseDir = Paths.get("Pulse", "NewChunks", serverip, world);
 
 			for (Path fileName : FILE_PATHS) {
 				Path fullPath = baseDir.resolve(fileName);
@@ -501,11 +501,11 @@ public class NewerNewChunks extends Module {
 			}
 			clearChunkData();
 			try {
-				Files.deleteIfExists(Paths.get("TrouserStreak", "NewChunks", serverip, world, "NewChunkData.txt"));
-				Files.deleteIfExists(Paths.get("TrouserStreak", "NewChunks", serverip, world, "OldChunkData.txt"));
-				Files.deleteIfExists(Paths.get("TrouserStreak", "NewChunks", serverip, world, "BeingUpdatedChunkData.txt"));
-				Files.deleteIfExists(Paths.get("TrouserStreak", "NewChunks", serverip, world, "OldGenerationChunkData.txt"));
-				Files.deleteIfExists(Paths.get("TrouserStreak", "NewChunks", serverip, world, "BlockExploitChunkData.txt"));
+				Files.deleteIfExists(Paths.get("Pulse", "NewChunks", serverip, world, "NewChunkData.txt"));
+				Files.deleteIfExists(Paths.get("Pulse", "NewChunks", serverip, world, "OldChunkData.txt"));
+				Files.deleteIfExists(Paths.get("Pulse", "NewChunks", serverip, world, "BeingUpdatedChunkData.txt"));
+				Files.deleteIfExists(Paths.get("Pulse", "NewChunks", serverip, world, "OldGenerationChunkData.txt"));
+				Files.deleteIfExists(Paths.get("Pulse", "NewChunks", serverip, world, "BlockExploitChunkData.txt"));
 			} catch (IOException e) {
 				//e.printStackTrace();
 			}
@@ -536,7 +536,7 @@ public class NewerNewChunks extends Module {
 			}
 			if (chunkcounter= chunkcounterticks < 1){
 				try {
-					List<String> allLines = Files.readAllLines(Paths.get("TrouserStreak/NewChunks/"+serverip+"/"+world+"/OldChunkData.txt"));
+					List<String> allLines = Files.readAllLines(Paths.get("Pulse/NewChunks/"+serverip+"/"+world+"/OldChunkData.txt"));
 
 					for (String line : allLines) {
 						oldchunksfound++;
@@ -545,7 +545,7 @@ public class NewerNewChunks extends Module {
 					//e.printStackTrace();
 				}
 				try {
-					List<String> allLines = Files.readAllLines(Paths.get("TrouserStreak/NewChunks/"+serverip+"/"+world+"/BeingUpdatedChunkData.txt"));
+					List<String> allLines = Files.readAllLines(Paths.get("Pulse/NewChunks/"+serverip+"/"+world+"/BeingUpdatedChunkData.txt"));
 
 					for (String line : allLines) {
 						beingUpdatedOldChunksfound++;
@@ -554,7 +554,7 @@ public class NewerNewChunks extends Module {
 					//e.printStackTrace();
 				}
 				try {
-					List<String> allLines = Files.readAllLines(Paths.get("TrouserStreak/NewChunks/"+serverip+"/"+world+"/OldGenerationChunkData.txt"));
+					List<String> allLines = Files.readAllLines(Paths.get("Pulse/NewChunks/"+serverip+"/"+world+"/OldGenerationChunkData.txt"));
 
 					for (String line : allLines) {
 						OldGenerationOldChunksfound++;
@@ -563,7 +563,7 @@ public class NewerNewChunks extends Module {
 					//e.printStackTrace();
 				}
 				try {
-					List<String> allLines = Files.readAllLines(Paths.get("TrouserStreak/NewChunks/"+serverip+"/"+world+"/NewChunkData.txt"));
+					List<String> allLines = Files.readAllLines(Paths.get("Pulse/NewChunks/"+serverip+"/"+world+"/NewChunkData.txt"));
 
 					for (String line : allLines) {
 						newchunksfound++;
@@ -572,7 +572,7 @@ public class NewerNewChunks extends Module {
 					//e.printStackTrace();
 				}
 				try {
-					List<String> allLines = Files.readAllLines(Paths.get("TrouserStreak/NewChunks/"+serverip+"/"+world+"/BlockExploitChunkData.txt"));
+					List<String> allLines = Files.readAllLines(Paths.get("Pulse/NewChunks/"+serverip+"/"+world+"/BlockExploitChunkData.txt"));
 
 					for (String line : allLines) {
 						tickexploitchunksfound++;
@@ -1005,7 +1005,7 @@ public class NewerNewChunks extends Module {
 	}
 	private void loadChunkData(Path savedDataLocation, Set<ChunkPos> chunkSet) {
 		try {
-			Path filePath = Paths.get("TrouserStreak/NewChunks", serverip, world).resolve(savedDataLocation);
+			Path filePath = Paths.get("Pulse/NewChunks", serverip, world).resolve(savedDataLocation);
 			List<String> allLines = Files.readAllLines(filePath);
 
 			for (String line : allLines) {
@@ -1027,7 +1027,7 @@ public class NewerNewChunks extends Module {
 	}
 	private void saveData(Path savedDataLocation, ChunkPos chunkpos) {
 		try {
-			Path dirPath = Paths.get("TrouserStreak", "NewChunks", serverip, world);
+			Path dirPath = Paths.get("Pulse", "NewChunks", serverip, world);
 			Files.createDirectories(dirPath);
 
 			Path filePath = dirPath.resolve(savedDataLocation);

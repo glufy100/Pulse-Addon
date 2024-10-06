@@ -17,12 +17,12 @@ import java.util.Random;
 
 import static meteordevelopment.meteorclient.MeteorClient.mc;
 
-public class RejectsUtils {
+public class PulseUtils {
     @PostInit
     public static void init() {
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
             System.out.println("saving seeds...");
-            RejectsConfig.get().save(MeteorClient.FOLDER);
+            PulseConfig.get().save(MeteorClient.FOLDER);
             Seeds.get().save(MeteorClient.FOLDER);
         }));
     }

@@ -35,15 +35,15 @@ public class ViewNbtCommand extends Command {
                     return SINGLE_SUCCESS;
                 }
                 ChatUtils.sendMsg(Text.of(mc.player.getMainHandStack().getComponents().toString()));
-            if (!Files.exists(Paths.get("TrouserStreak/SavedNBT/ViewedNBTData.txt"))){
-                File file = new File("TrouserStreak/SavedNBT/ViewedNBTData.txt");
+            if (!Files.exists(Paths.get("Pulse/SavedNBT/ViewedNBTData.txt"))){
+                File file = new File("Pulse/SavedNBT/ViewedNBTData.txt");
                 try {
                     file.createNewFile();
                 } catch (IOException e) {}
             }
             try {
-                new File("TrouserStreak/SavedNBT/").mkdirs();
-                FileWriter writer = new FileWriter("TrouserStreak/SavedNBT/ViewedNBTData.txt", true);
+                new File("Pulse/SavedNBT/").mkdirs();
+                FileWriter writer = new FileWriter("Pulse/SavedNBT/ViewedNBTData.txt", true);
                 writer.write(String.valueOf(mc.player.getMainHandStack().getComponents().toString()));
                 writer.write("\r\n");   // write new line
                 writer.close();

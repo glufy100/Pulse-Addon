@@ -1,7 +1,7 @@
 package Glufy.Pulse.mixin.meteor;
 
-import Glufy.Pulse.utils.RejectsConfig;
-import Glufy.Pulse.utils.RejectsUtils;
+import Glufy.Pulse.utils.PulseConfig;
+import Glufy.Pulse.utils.PulseUtils;
 import meteordevelopment.meteorclient.systems.modules.Category;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.meteorclient.utils.Utils;
@@ -20,8 +20,8 @@ public class ModuleMixin {
 
     @Inject(method = "<init>", at = @At("TAIL"))
     private void onInit(Category category, String name, String description, CallbackInfo info) {
-        if (RejectsConfig.get().duplicateModuleNames) {
-            this.name = RejectsUtils.getModuleName(name);
+        if (PulseConfig.get().duplicateModuleNames) {
+            this.name = PulseUtils.getModuleName(name);
             this.title = Utils.nameToTitle(this.name);
         }
     }

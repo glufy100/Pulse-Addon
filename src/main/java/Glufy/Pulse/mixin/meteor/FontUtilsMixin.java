@@ -1,6 +1,6 @@
 package Glufy.Pulse.mixin.meteor;
 
-import Glufy.Pulse.utils.RejectsConfig;
+import Glufy.Pulse.utils.PulseConfig;
 import meteordevelopment.meteorclient.MeteorClient;
 import meteordevelopment.meteorclient.utils.render.FontUtils;
 import org.spongepowered.asm.mixin.Mixin;
@@ -17,7 +17,7 @@ import java.util.Set;
 public class FontUtilsMixin {
     @Inject(method = "getSearchPaths", at = @At("HEAD"), cancellable = true, remap = false)
     private static void onGetSearchPaths(CallbackInfoReturnable<Set<String>> info) {
-        if (!RejectsConfig.get().loadSystemFonts) {
+        if (!PulseConfig.get().loadSystemFonts) {
             File dir = new File(MeteorClient.FOLDER, "fonts");
             info.setReturnValue(!dir.mkdirs() ? Collections.singleton(dir.getAbsolutePath()) : new HashSet<>());
         }

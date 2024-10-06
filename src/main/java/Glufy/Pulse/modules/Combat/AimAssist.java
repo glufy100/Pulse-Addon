@@ -2,7 +2,7 @@ package Glufy.Pulse.modules.Combat;
 
 import meteordevelopment.meteorclient.systems.modules.Categories;
 
-import Glufy.Pulse.utils.RejectsUtils;
+import Glufy.Pulse.utils.PulseUtils;
 import meteordevelopment.meteorclient.events.render.Render3DEvent;
 import meteordevelopment.meteorclient.events.world.TickEvent;
 import meteordevelopment.meteorclient.settings.*;
@@ -107,7 +107,7 @@ public class AimAssist extends Module {
             if (!ignoreWalls.get() && !PlayerUtils.canSeeEntity(entity)) return false;
             if (entity == mc.player || !entities.get().contains(entity.getType())) return false;
             if (entity instanceof PlayerEntity && !Friends.get().shouldAttack((PlayerEntity) entity)) return false;
-            return RejectsUtils.inFov(entity, fov.get());
+            return PulseUtils.inFov(entity, fov.get());
         }, priority.get());
     }
 

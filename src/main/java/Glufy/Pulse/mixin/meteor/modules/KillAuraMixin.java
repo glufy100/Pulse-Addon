@@ -1,7 +1,7 @@
 package Glufy.Pulse.mixin.meteor.modules;
 
 import Glufy.Pulse.modules.Combat.ShieldBypass;
-import Glufy.Pulse.utils.RejectsUtils;
+import Glufy.Pulse.utils.PulseUtils;
 import meteordevelopment.meteorclient.events.Cancellable;
 import meteordevelopment.meteorclient.events.world.TickEvent;
 import meteordevelopment.meteorclient.settings.*;
@@ -101,7 +101,7 @@ public class KillAuraMixin extends Module {
     @Inject(method = "entityCheck", at = @At(value = "RETURN", ordinal = 14), cancellable = true)
     private void onReturn(Entity entity, CallbackInfoReturnable<Boolean> info) {
         if (ignoreInvisible.get() && entity.isInvisible()) info.setReturnValue(false);
-        if (!RejectsUtils.inFov(entity, fov.get())) info.setReturnValue(false);
+        if (!PulseUtils.inFov(entity, fov.get())) info.setReturnValue(false);
         info.setReturnValue(info.getReturnValueZ());
     }
 

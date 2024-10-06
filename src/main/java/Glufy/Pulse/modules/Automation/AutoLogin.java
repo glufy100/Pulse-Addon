@@ -2,7 +2,7 @@ package Glufy.Pulse.modules.Automation;
 
 import Glufy.Pulse.PulseAddon;
 import Glufy.Pulse.settings.StringMapSetting;
-import Glufy.Pulse.utils.RejectsUtils;
+import Glufy.Pulse.utils.PulseUtils;
 import meteordevelopment.meteorclient.events.game.GameJoinedEvent;
 import meteordevelopment.meteorclient.events.packets.PacketEvent;
 import meteordevelopment.meteorclient.gui.GuiTheme;
@@ -65,7 +65,7 @@ public class AutoLogin extends Module {
         WHorizontalList l = theme.horizontalList();
         WButton btn = l.add(theme.button("Random generate password")).widget();
         btn.action = () -> {
-            String password = RejectsUtils.getRandomPassword(16);
+            String password = PulseUtils.getRandomPassword(16);
             MutableText text = Text.literal(Formatting.BOLD + "Click here to register securely.");
             text.setStyle(text.getStyle().withClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, String.format("/register %s %s", password, password))));
             info(text);
