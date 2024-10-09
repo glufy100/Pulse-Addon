@@ -95,7 +95,6 @@ public class PulseAddon extends MeteorAddon {
         modules.add(new VehicleOneHit());
         modules.add(new AutoEnchant());
         modules.add(new AutoRename());
-
         modules.add(new AirstrikePlus());
         modules.add(new AnHero());
         modules.add(new AutoCommand());
@@ -130,7 +129,6 @@ public class PulseAddon extends MeteorAddon {
         modules.add(new Teleport());
         modules.add(new TPFly());
         modules.add(new TrailMaker());
-
         modules.add(new AfkLogout());
         modules.add(new AutoCenter());
         modules.add(new AutoWalkHIG());
@@ -146,6 +144,13 @@ public class PulseAddon extends MeteorAddon {
         modules.add(new NegPosBorer());
         modules.add(new PosNegBorer());
         modules.add(new PosPosBorer());
+        modules.add(new JumpFlight());
+        modules.add(new AutoInteract());
+        modules.add(new AutoLeave());
+        modules.add(new AutoMud());
+        modules.add(new AutoSneak());
+        modules.add(new AutoSleep());
+        modules.add(new Grid());
 
         // Commands
         Commands.add(new CenterCommand());
