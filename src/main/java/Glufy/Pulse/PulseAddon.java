@@ -151,6 +151,7 @@ public class PulseAddon extends MeteorAddon {
         modules.add(new AutoSneak());
         modules.add(new AutoSleep());
         modules.add(new Grid());
+        modules.add(new ForceOPSign());
 
         // Commands
         Commands.add(new CenterCommand());
