@@ -1,27 +1,42 @@
 # Pulse
 
-**Pulse** is a fusion of three popular addons for the Meteor Client: **Meteor Reject**, **TrouserStreak**, and **Highway Toll**. This project combines the unique features of each of these addons to deliver an enhanced and more flexible Minecraft experience.
+**Pulse** is a fusion of three popular Meteor Client addons: **Meteor Reject**, **TrouserStreak**, and **Highway Toll**. It combines their unique features to deliver an enhanced and more flexible Minecraft experience.
 
 ## Key Features
 
-- **Meteor Reject**: Provides various combat, movement, and world management enhancements for advanced players.
-- **TrouserStreak**: Focused on griefing, offering specialized modules for destruction and chaos in Minecraft worlds.
-- **Highway Toll**: Specializes in automation and efficiency, with practical modules to simplify repetitive tasks.
+- **Meteor Reject**: Provides a variety of modules and commands that should be in Meteor by default.  
+  [Inspired by Meteor Reject](https://github.com/AntiCope/meteor-rejects)
+- **TrouserStreak**: Focuses on griefing, offering specialized modules for destruction and chaos.  
+  [Inspired by TrouserStreak](https://github.com/etianl/Trouser-Streak)
+- **Highway Toll**: Specializes in automation, providing modules to streamline the building of highways.  
+  [Inspired by Highway Toll (HIGTools)](https://github.com/RedCarlos26/HIGTools)
 
-### Why Pulse?
+### Why Choose Pulse?
 
-Pulse seamlessly integrates the features of these three addons, creating a more powerful package with unique synergies. Whether you’re a PvP player, builder, griefer, or explorer, Pulse has something for everyone.
+Pulse integrates the best features of these three addons, creating a versatile and powerful package. Whether you’re into PvP, building, griefing, or exploring, Pulse has something to offer.
 
 ### Installation
 
 1. Download [Meteor Client](https://meteorclient.com).
 2. Add **Pulse** to your Minecraft `mods` folder.
-3. Launch Minecraft and enjoy the new modules.
+3. Launch Minecraft to access the new modules.
 
 ### Contributing
 
-Contributions are welcome! However, please avoid submitting modules that are already available in the Meteor Client. The goal of Pulse is to bring fresh and unique content, not to duplicate existing features.
+Contributions are welcome! Please avoid submitting modules that already exist in the Meteor Client. Our goal is to bring fresh and unique content, not duplicate existing features.
+
+### Bug Reports
+
+When reporting a bug, please include the following information:
+- **Minecraft version** you are using.
+- **Meteor Client version** you are using.
+- **Pulse version** you are using.
+- Whether you are using a **cracked or official launcher**.
+- A clear description of the **bug**.
+
+- Tickets will be automatically closed if there is no response within **3 days**.
+- **Note**: We do not guarantee support for unofficial launchers. Use them at your own risk.
 
 ---
 
-This project is constantly evolving, so make sure to check for regular updates.
+Stay tuned for regular updates as this project continues to evolve.
