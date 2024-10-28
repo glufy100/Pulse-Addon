@@ -14,7 +14,7 @@
   },
 
   "license": "GPL-3.0",
-  "icon": "icon.png",
+  "icon": "assets/Pulse/icon.png",
 
   "environment": "client",
   "entrypoints": {

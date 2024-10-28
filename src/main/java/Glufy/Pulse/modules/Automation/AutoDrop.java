@@ -1,5 +1,6 @@
-package Glufy.Pulse.modules.Misc;
+package Glufy.Pulse.modules.Automation;
 
+import Glufy.Pulse.PulseAddon;
 import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.events.world.TickEvent;
 import meteordevelopment.meteorclient.settings.*;
@@ -36,7 +37,7 @@ public class AutoDrop extends Module {
             .build());
 
     public AutoDrop() {
-        super(Categories.Misc, "auto-drop", "Drops the stack in your selected slot automatically");
+        super(PulseAddon.Automation, "auto-drop", "Drops the stack in your selected slot automatically");
     }
     private int previousslot=0;
     private boolean getprevslot=false;

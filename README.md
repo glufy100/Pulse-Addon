@@ -1,8 +1,8 @@
 # Pulse
 
-**Pulse** is a fusion of three popular Meteor Client addons: **Meteor Reject**, **TrouserStreak**, and **Highway Toll**. It combines their unique features to deliver an enhanced and more flexible Minecraft experience.
+**Pulse**  is a mod that expands the Meteor Client with new features, adding modules across Combat, Miscellaneous, Movement, Player, and Render categories. It also introduces entirely new module categories, including Automation, Build, Crash, and Dupe.
 
-## Key Features
+## Inspired by
 
 - **Meteor Reject**: Provides a variety of modules and commands that should be in Meteor by default.  
   [Inspired by Meteor Reject](https://github.com/AntiCope/meteor-rejects)
@@ -10,6 +10,11 @@
   [Inspired by TrouserStreak](https://github.com/etianl/Trouser-Streak)
 - **Highway Toll**: Specializes in automation, providing modules to streamline the building of highways.  
   [Inspired by Highway Toll (HIGTools)](https://github.com/RedCarlos26/HIGTools)
+- **Crash Modules**: Crash capabilities inspired by *Meteor Crash Addon*.  
+    [Inspired by Meteor Crash Addon](https://github.com/AntiCope/meteor-crash-addon)
+- **Dupe and Crash Modules**: Duplication tools and additional crash modules inspired by *Crystal Addon Reborn*.  
+  [Inspired by Crystal Addon Reborn](https://github.com/Vulnerab1lity/Crystal-Addon-Reborn)
+
 
 ### Why Choose Pulse?
 

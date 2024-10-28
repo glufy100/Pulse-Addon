@@ -1,8 +1,8 @@
 //Credits to Thorioum https://github.com/Thorioum for discovery of this!
 
-package Glufy.Pulse.modules.Misc;
+package Glufy.Pulse.modules.Dupe;
 
-import meteordevelopment.meteorclient.systems.modules.Categories;
+import Glufy.Pulse.PulseAddon;
 import meteordevelopment.meteorclient.events.game.GameLeftEvent;
 import meteordevelopment.meteorclient.events.game.OpenScreenEvent;
 import meteordevelopment.meteorclient.settings.BoolSetting;
@@ -40,7 +40,7 @@ public class BookAndQuillDupe extends Module {
     );
 
     public BookAndQuillDupe() {
-        super(Categories.Misc, "Book And Quill Dupe", "Overflows data in a book's title to cause dupes and chunk bans. Credits to Thorioum!");
+        super(PulseAddon.Dupe, "Book And Quill Dupe", "Overflows data in a book's title to cause dupes and chunk bans. Credits to Thorioum!");
     }
 
 

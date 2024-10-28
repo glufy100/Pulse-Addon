@@ -1,5 +1,6 @@
-package Glufy.Pulse.modules.Misc;
+package Glufy.Pulse.modules.Automation;
 
+import Glufy.Pulse.PulseAddon;
 import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.events.game.GameLeftEvent;
 import meteordevelopment.meteorclient.events.game.OpenScreenEvent;
@@ -121,7 +122,7 @@ public class AutoDisplays extends Module {
             .build());
 
     public AutoDisplays() {
-        super(Categories.Misc, "auto-displays", "Automatically spam block or text displays around players. Requires operator access.");
+        super(PulseAddon.Automation, "auto-displays", "Automatically spam block or text displays around players. Requires operator access.");
     }
 
     private CopyOnWriteArrayList<PlayerListEntry> players;

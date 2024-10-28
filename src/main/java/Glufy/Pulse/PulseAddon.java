@@ -7,6 +7,8 @@ import Glufy.Pulse.modules.Automation.*;
 import Glufy.Pulse.modules.Build.*;
 import Glufy.Pulse.modules.Build.highwayborers.*;
 import Glufy.Pulse.modules.Combat.*;
+import Glufy.Pulse.modules.Crash.*;
+import Glufy.Pulse.modules.Dupe.*;
 import Glufy.Pulse.modules.Misc.*;
 import Glufy.Pulse.modules.Movement.*;
 import Glufy.Pulse.modules.Player.*;
@@ -31,6 +33,8 @@ public class PulseAddon extends MeteorAddon {
     public static final Logger LOG = LoggerFactory.getLogger("Pulse");
     public static final Category Automation = new Category("Automation", Items.REDSTONE.getDefaultStack());
     public static final Category Build = new Category("Build", Items.BRICKS.getDefaultStack());
+    public static final Category Crash = new Category("Crash", Items.MACE.getDefaultStack());
+    public static final Category Dupe = new Category("Dupe", Items.DIAMOND_BLOCK.getDefaultStack());
     public static final HudGroup HUD_GROUP = new HudGroup("Pulse");
 
     @Override
@@ -108,7 +112,6 @@ public class PulseAddon extends MeteorAddon {
         modules.add(new BaseFinder());
         modules.add(new BlockListMineCommand());
         modules.add(new BoatKill());
-        modules.add(new BookAndQuillDupe());
         modules.add(new BoomPlus());
         modules.add(new ExplosionAura());
         modules.add(new FlightAntikick());
@@ -124,7 +127,6 @@ public class PulseAddon extends MeteorAddon {
         modules.add(new OPplayerTPmodule());
         modules.add(new OPServerKillModule());
         modules.add(new RedstoneNuker());
-        modules.add(new ShulkerDupe());
         modules.add(new StorageLooter());
         modules.add(new Teleport());
         modules.add(new TPFly());
@@ -153,6 +155,39 @@ public class PulseAddon extends MeteorAddon {
         modules.add(new Grid());
         modules.add(new ForceOPSign());
 
+        //Dupe Module
+        modules.add(new ShulkerDupe());
+        modules.add(new BookAndQuillDupe());
+        modules.add(new ItemFrameDupe());
+        modules.add(new XsDupe());
+
+        //Crash Module
+        modules.add(new AACCrash());
+        modules.add(new AdvancedCrash());
+        modules.add(new AutoLagSign());
+        modules.add(new BookCrash());
+        modules.add(new BungeeCrash());
+        modules.add(new CompletionCrash());
+        modules.add(new ContainerCrash());
+        modules.add(new CraftingCrash());
+        modules.add(new CreativeCrash());
+        modules.add(new EntityCrash());
+        modules.add(new ErrorCrash());
+        modules.add(new ExceptionCrash());
+        modules.add(new InteractCrash());
+        modules.add(new JigSawCrash());
+        modules.add(new LecternCrash());
+        modules.add(new MessageLagger());
+        modules.add(new MovementCrash());
+        modules.add(new PacketSpammer());
+        modules.add(new SequenceCrash());
+        modules.add(new SignCrash());
+        modules.add(new StorageCrash());
+        modules.add(new SwingCrash());
+        modules.add(new TradeCrash());
+        modules.add(new UDPFlood());
+        modules.add(new WindowCrash());
+
         // Commands
         Commands.add(new CenterCommand());
         Commands.add(new ClearChatCommand());
@@ -178,6 +213,26 @@ public class PulseAddon extends MeteorAddon {
         Commands.add(new GarbageCleanerCommand());
         Commands.add(new LavaTimeCalculator());
         Commands.add(new CasterTimer());
+        Commands.add(new CrashItemCommand());
+        Commands.add(new CheckHostCommand());
+        Commands.add(new CheckSSLCommand());
+        Commands.add(new ClearCommand());
+        Commands.add(new Coordinates());
+        Commands.add(new DNSLookupCommand());
+        Commands.add(new IPBlacklistCommand());
+        Commands.add(new LatencyCommand());
+        Commands.add(new NetProxyCommand());
+        Commands.add(new NetProxyDisconnectCommand());
+        Commands.add(new PingCommand());
+        Commands.add(new SpoofNameCommand());
+        Commands.add(new SpoofUUIDCommand());
+        Commands.add(new SubnetCalculatorCommand());
+        Commands.add(new Title());
+        Commands.add(new TracerouteCommand());
+        Commands.add(new TwoBTwoTSeenCommand());
+        Commands.add(new TwoBTwoTStatsCommand());
+        Commands.add(new WebhookDeleteCommand());
+        Commands.add(new WebhookSendCommand());
 
         // HUD
         Hud hud = Systems.get(Hud.class);
@@ -192,8 +247,9 @@ public class PulseAddon extends MeteorAddon {
     public void onRegisterCategories() {
         Modules.registerCategory(Automation);
         Modules.registerCategory(Build);
+        Modules.registerCategory(Dupe);
+        Modules.registerCategory(Crash);
     }
-    
 
     @Override
     public String getWebsite() {

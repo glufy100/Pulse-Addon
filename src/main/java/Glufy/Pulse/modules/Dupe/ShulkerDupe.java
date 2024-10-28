@@ -1,6 +1,6 @@
-package Glufy.Pulse.modules.Misc;
+package Glufy.Pulse.modules.Dupe;
 
-import meteordevelopment.meteorclient.systems.modules.Categories;
+import Glufy.Pulse.PulseAddon;
 import meteordevelopment.meteorclient.events.game.OpenScreenEvent;
 import meteordevelopment.meteorclient.events.packets.PacketEvent;
 import meteordevelopment.meteorclient.events.world.TickEvent;
@@ -24,7 +24,7 @@ public class ShulkerDupe extends Module {
     private final SettingGroup sgAutoTool = settings.createGroup("AutoTool");
 
     public ShulkerDupe() {
-        super(Categories.Misc, "shulker-dupe", "ShulkerDupe only works in vanilla, forge, and fabric servers version 1.19 and below.");
+        super(PulseAddon.Dupe, "shulker-dupe", "ShulkerDupe only works in vanilla, forge, and fabric servers version 1.19 and below.");
     }
 
     private final Setting<Boolean> autoT = sgAutoTool.add(new BoolSetting.Builder()
